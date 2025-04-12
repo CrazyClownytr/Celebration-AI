@@ -1,0 +1,75 @@
+/* Reset & base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Layout container */
+.container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #34495e;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.ready-text {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Button styling */
+.start-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #27ae60;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #219150;
+}
+
+.subtle-info {
+    font-style: italic;
+    color: #777;
+    font-size: 0.95rem;
+    opacity: 0.85;
+    margin-top: 1rem;
+}
+

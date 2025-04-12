@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Layout container */
+.container {
+    text-align: center;
+    padding: 2rem;
+    width: 80%; /* 80% van de breedte van het scherm */
+    max-width: 1200px; /* Zorg ervoor dat de container niet te groot wordt */
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #34495e;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.ready-text {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Button styling */
+.start-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #27ae60;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+    margin: 1rem;
+}
+
+.start-button:hover {
+    background-color: #219150;
+}
+
+.subtle-info {
+    font-style: italic;
+    color: #777;
+    font-size: 0.95rem;
+    opacity: 0.85;
+    margin-top: 1rem;
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.close, .close-start {
+    color: #aaa;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close-start:hover {
+    color: #000;
+}
+
+.mediaWrapper {
+    display: flex;
+    flex-direction: row;  /* Zorg ervoor dat de video en afbeelding naast elkaar staan */
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 20px; /* Voeg wat ruimte toe tussen de video en de afbeelding */
+}
+
+/* Video view */
+.videoView {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+video {
+    display: block;
+    width: 40vw; /* Pas de breedte aan naar wens */
+    height: 40vh; /* Pas de hoogte aan naar wens */
+    transform: rotateY(180deg); /* Draai de video als nodig */
+}
+
+/* #footballerImg {
+    display: block;
+    width: 20vw;
+    height: 35vh;
+    transform: rotateY(180deg);
+} */
+
+
+
+
+#output_canvas {
+    z-index: 1;
+    position: absolute;
+    pointer-events: none;
+    transform: rotateY(180deg);
+}
+
+#predictionResult {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #f0f0f0;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+#poseLabel {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#confidenceScore {
+    font-size: 1rem;
+    color: #555;
+}
