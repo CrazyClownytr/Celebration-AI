@@ -1,66 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediaPipe Handpose</title>
+    <link rel="stylesheet" href="./intro.css">
     <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
-  <script type="module" crossorigin src="./assets/index-jh3tKFj0.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index--i_pa1Hy.css">
+    <script defer type="module" src="./script.js"></script>
 </head>
+
 <body>
-    <section>
-        <h1>Guess and Replicate!</h1>
+    <main class="container">
+        <h1>Footballers Celebration Quiz</h1>
+        <h2>Can you guess the celebration of the footballer by replicating it?</h2>
+        <p>Open your camera, guess and replicate the celebration of the footballer and score points!</p>
 
-        <button id="howToPlayBtn">How to play</button>
-        <div id="howToPlayModal" class="modal">
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>How to Play</h2>
-            <p>
-              Deze applicatie is bedoeld voor elke voetbalfan om te raden welke celebrations voetballers doen door ze na te doen voor de camera.  
-              <br><br>
-              <strong>Stap 1:</strong> Klik op <em>"START WEBCAM"</em><br>
-              <strong>Stap 2:</strong> Houd je hand zichtbaar in beeld<br>
-              <strong>Stap 3:</strong> De app voorspelt welk gebaar je maakt!
-            </p>
-          </div>
-        </div>
+        <p class="ready-text">Are you ready?</p>
 
-          <!-- Afbeelding van de speler -->
-  <div id="playerImage" style="display: none; text-align: center;">
-    <img id="footballerImg" src="" alt="Footballer Celebration" style="max-width: 300px;">
-    <p>Wat is zijn celebration?</p>
-  </div>
-        
+        <a href="./quiz.html" class="start-button">Start Quiz</a>
 
-        <button id="webcamButton">Start your webcam</button>
-        <!-- <button id="logButton">LOG DATA</button> -->
-        <div class="videoView">
-            <div style="position: relative;">
-                <video id="webcam" style="position: absolute;" muted autoplay playsinline></video>
-                <canvas id="output_canvas" style="position: absolute; left: 0px; top: 0px;"></canvas>
-            </div>
-        </div>
-
-        <!-- Popup om quiz te starten -->
-<!-- Modal voor quiz starten -->
-<div id="startQuizModal" class="modal">
-    <div class="modal-content">
-      <span class="close-start">&times;</span>
-      <h2>Ready to play?</h2>
-      <p>Doe het gebaar van de speler zodra je het ziet!</p>
-      <button id="startQuizBtn">Start Quiz</button>
-    </div>
-  </div>
-  
-  
-  
-        <!-- Element to show prediction -->
-        <div id="predictionResult">
-            <h2 id="poseLabel">Pose: </h2>
-            <p id="confidenceScore">Confidence: </p>
-        </div>
-    </section>
+        <p class="subtle-info">
+            Deze applicatie is bedoeld voor elke voetbalfan om te raden welke celebrations voetballers doen door ze na te doen voor de camera.
+        </p>        
+    </main>
 </body>
+
 </html>

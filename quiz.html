@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediaPipe Handpose</title>
+    <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+  <script type="module" crossorigin src="./assets/index-jh3tKFj0.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index--i_pa1Hy.css">
+</head>
+<body>
+    <section>
+        <h1>Guess and Replicate!</h1>
+
+        <button id="howToPlayBtn">How to play</button>
+        <div id="howToPlayModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>How to Play</h2>
+            <p>
+              Deze applicatie is bedoeld voor elke voetbalfan om te raden welke celebrations voetballers doen door ze na te doen voor de camera.  
+              <br><br>
+              <strong>Stap 1:</strong> Klik op <em>"START WEBCAM"</em><br>
+              <strong>Stap 2:</strong> Houd je hand zichtbaar in beeld<br>
+              <strong>Stap 3:</strong> De app voorspelt welk gebaar je maakt!
+            </p>
+          </div>
+        </div>
+
+          <!-- Afbeelding van de speler -->
+  <div id="playerImage" style="display: none; text-align: center;">
+    <img id="footballerImg" src="" alt="Footballer Celebration" style="max-width: 300px;">
+    <p>Wat is zijn celebration?</p>
+  </div>
+        
+
+        <button id="webcamButton">Start your webcam</button>
+        <!-- <button id="logButton">LOG DATA</button> -->
+        <div class="videoView">
+            <div style="position: relative;">
+                <video id="webcam" style="position: absolute;" muted autoplay playsinline></video>
+                <canvas id="output_canvas" style="position: absolute; left: 0px; top: 0px;"></canvas>
+            </div>
+        </div>
+
+        <!-- Popup om quiz te starten -->
+<!-- Modal voor quiz starten -->
+<div id="startQuizModal" class="modal">
+    <div class="modal-content">
+      <span class="close-start">&times;</span>
+      <h2>Ready to play?</h2>
+      <p>Doe het gebaar van de speler zodra je het ziet!</p>
+      <button id="startQuizBtn">Start Quiz</button>
+    </div>
+  </div>
+  
+  
+  
+        <!-- Element to show prediction -->
+        <div id="predictionResult">
+            <h2 id="poseLabel">Pose: </h2>
+            <p id="confidenceScore">Confidence: </p>
+        </div>
+    </section>
+</body>
+</html>
